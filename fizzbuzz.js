@@ -5,13 +5,24 @@ For numbers which are multiples of both three and five print FizzBuzz.
 */
 
 function fizzbuzz(input) {
-    let arr = [0];
+    let arr = [];
     for(let i = 1; i < input; i++) {
+        if(i % 3 == 0) {
+            arr.push(i + " fizz");
+        }
+
+        else if (i % 5 == 0) {
+            arr.push (i + " buzz");
+        } 
+
+        else {
+            arr.push (i);
+        }
 
     }
 
 
-    return arr; //change this
+    return console.log(arr); //change this
 }
 
 var input = 22;
