@@ -2,8 +2,6 @@ function computerPlay() {
     let rps = ['rock', 'paper', 'scissors'];
     let ret = (rps[Math.floor(Math.random() * rps.length)]);
 
-    console.log(ret); //delete this @ the very end
-
     return ret;
 }
 
@@ -32,14 +30,22 @@ function playRound(pSelection, cSelection) {
     else  { //code when things are tied
         ret = 'Draw!'
     }
-    
+
     return ret;
 }
 
 function game() {
-
+    //const pSelection = "rock";
+    //const pSelection = prompt("Player, enter your choice (rock, paper, scissors): ");
+    const cSelection = computerPlay();
+    let ret = '0';
+    
+    for (let i = 0 ; i < 5; i ++) {
+        console.log(playRound(pSelection, cSelection));
+    }
+    
 }
 
-const pSelection = "rock";
-const cSelection = computerPlay();
-console.log(playRound(pSelection, cSelection));
+game();
+
+//console.log(playRound(pSelection, cSelection));
