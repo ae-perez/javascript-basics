@@ -5,15 +5,22 @@ body {
 #main-div {
     margin: auto;
     width: 60%;
-    border: 5px solid #E5D429;
     padding: 10px;
-    animation: pulse 5s; 
+    animation: glow 5s infinite;
 }
 
 #game-name {
     color: #5D5D5D;
     font-size: 60px;
-    animation: pulse 5s; 
+    animation: pulse 5s;
+}
+
+.player {
+    background-color: aqua;
+}
+
+.computer {
+    background-color: blueviolet;
 }
 
 @keyframes pulse {
@@ -24,3 +31,7 @@ body {
       color: #5D5D5D;
     }
   }
+
+@keyframes glow {
+    50% {text-shadow: 5px 5px 10px #E5D429;}
+}
