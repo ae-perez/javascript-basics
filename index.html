@@ -9,53 +9,59 @@
   <script src="rockpaperscissor.js"></script>
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
 
 
   <meta charset="UTF-8"/>
 </head>
 <body>
-    <div id="main-div">
+    <div id="title-div">
       <h1 id="game-name">Rock, Paper, Scissors!</h1>
+      <div class="msg"> <!-- make this pop out and disappear when clicked on-->
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+       
     </div>
 
 
-    <div id="rps-div">
-      <div class="icon-box">
-        <div class="box">ICON</div>
-        <div class="box">ICON</div>
+    <div class="screen-div"> <!-- the screen div-->
+      <div class="player-div"> <!-- div that will have player components-->
+        <div class="player choice"> <!-- where the icons will slide to for player-->
+          <h1>remove me later</h1>
+        </div>
+        <div class="icon-div"> <!-- where the options are held-->
+          <img src="rock-hands.png" alt="rock" width="90" height="90">
+          <img src="paper-hands.png" alt="rock" width="90" height="90">
+          <img src="scissor-hands.png" alt="rock" width="90" height="90">
+        </div>
       </div>
+
+      <div class="comp-div"> <!-- div that will have computer components -->
+        <div class= "comp choice"> <!-- where the icons will slide to for computer-->
+          <h1>remove me later</h1>
+        </div>
+        <div class="icon-div"> <!-- where the options are held-->
+          <img src="rock-hands.png" alt="rock" width="90" height="90">
+          <img src="paper-hands.png" alt="rock" width="90" height="90">
+          <img src="scissor-hands.png" alt="rock" width="90" height="90">
+        </div>
+
+      </div>
+    </div>
+
+    <div class=score-div>
       
-
-
-      <div class="player block">
-        <div>
-          <img src="rock-hands.png" alt="rock" width="90" height="90">
-        </div>
-        <div>
-          <img src="paper-hands.png" alt="rock" width="90" height="90">
-        </div>
-        <div>
-          <img src="scissor-hands.png" alt="rock" width="90" height="90">
-        </div>
-      </div>
-
-      <div class="computer block">
-        <div>
-          <img src="rock-hands.png" alt="rock" width="90" height="90">
-        </div>
-        <div>
-          <img src="paper-hands.png" alt="rock" width="90" height="90">
-        </div>
-        <div>
-          <img src="scissor-hands.png" alt="rock" width="90" height="90">
-        </div>
-      </div>
     </div>
+
+
 
 </body>
 </html>
 
 <!--
-  https://www.color-hex.com/color-palette/19843
+NOTES:
+- https://www.color-hex.com/color-palette/19843
+- adjust the widths and heights according to screen size
 -->
