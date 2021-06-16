@@ -29,6 +29,8 @@ body {
     width: 100%;
 }
 
+
+/*--------------------------------------------------------------*/
 #rps-div {
     /*background-color: black;*/
     position: relative;
@@ -77,3 +79,5 @@ img {
 @keyframes glow {
     50% {text-shadow: 5px 5px 10px #E5D429;}
 }
+
+
