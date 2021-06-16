@@ -23,6 +23,8 @@ p {
 .msg {
     background-color: white;
     position: absolute;
+    display: none; /*change back to flex once js is complete*/
+    align-items: center;
     left: 0px;
     right: 0px;
     top: 0px;
@@ -34,6 +36,8 @@ p {
     border-radius: 30px;
     border: 10px solid #f6db35;
     text-align: center;
+    
+    
 }
 
 .screen-div {
