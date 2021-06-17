@@ -34,18 +34,24 @@ function playRound(pSelection, cSelection) {
     return ret;
 }
 
+
+
+//this is YOUR MAIN FUNCTION
 function game() {
+    var playerScore = 0;
+    var compScore = 0;
+    var count = 0; 
+    
     //const pSelection = "rock";
     //const pSelection = prompt("Player, enter your choice (rock, paper, scissors): ");
     const cSelection = computerPlay();
     let ret = '0';
     
-    for (let i = 0 ; i < 5; i ++) {
-        console.log(playRound(pSelection, cSelection));
-    }
+    return console.log(cSelection + " eeeek");
     
 }
 
 game();
 
 //console.log(playRound(pSelection, cSelection));
+
