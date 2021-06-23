@@ -34,7 +34,7 @@ function playRound(pSelection, cSelection) {
     return ret;
 }
 
-function playerPlay(pSelection) {
+function playerPlay() {
     var rock = document.getElementById("rock");
     var scissors = document.getElementById("scissors");
     var paper = document.getElementById("paper");
@@ -52,9 +52,6 @@ function playerPlay(pSelection) {
         console.log("scissors scissors");
     }
 
-
-
-    return pSelection;
 }
 
 
@@ -62,11 +59,10 @@ function playerPlay(pSelection) {
 function game() {
     // initialize values
     const cSelection = computerPlay(); //get computer selection
-    const pSelection = 0; //get player selection
-    console.log( "this is when pselection equals 0: " + pSelection);
+    //const pSelection = 0; //get player selection
     var count = 0; 
 
-    console.log(pSelection);
+    
 
     //const pSelection = "rock";
     //const pSelection = prompt("Player, enter your choice (rock, paper, scissors): ");
