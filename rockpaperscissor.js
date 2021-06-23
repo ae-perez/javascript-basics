@@ -5,6 +5,34 @@ function computerPlay() {
     return ret;
 }
 
+
+
+function playerPlay(pSelection) {
+    var rock = document.getElementById("rock");
+    var scissors = document.getElementById("scissors");
+    var paper = document.getElementById("paper");
+
+
+    rock.onclick = function() {
+        pSelection = 'rock';
+        console.log(pSelection);
+    }
+
+    paper.onclick = function() {
+        console.log("paper paper");
+    }
+
+    scissors.onclick = function() {
+        console.log("scissors scissors");
+    }
+
+}
+
+function intro () {
+    //this is where you will adjust the display box div
+    //intro message
+}
+
 function playRound(pSelection, cSelection) {
     pSelection = pSelection.toLowerCase();
     let ret = '0';
@@ -34,49 +62,41 @@ function playRound(pSelection, cSelection) {
     return ret;
 }
 
-function playerPlay() {
-    var rock = document.getElementById("rock");
-    var scissors = document.getElementById("scissors");
-    var paper = document.getElementById("paper");
-
-    rock.onclick = function() {
-        pSelection = 'rock';
-        console.log(pSelection);
-    }
-
-    paper.onclick = function() {
-        console.log("paper paper");
-    }
-
-    scissors.onclick = function() {
-        console.log("scissors scissors");
-    }
-
-}
 
 
 //this is YOUR MAIN FUNCTION
 function game() {
+    //game only starts when player selects their choice
+
     // initialize values
-    const cSelection = computerPlay(); //get computer selection
-    //const pSelection = 0; //get player selection
-    var count = 0; 
+        //call computerPlay() to initialize cSelection
+        //call create onclick and set its value to pSelection once clicked
+    const pSelection = 0;
+
+    document.getElementById("rock").addEventListener("click", function() {
+        console.log("ROCKYYYYY!");
+
+    });
+
+    const cSelection = computerPlay(); 
 
     
 
-    //const pSelection = "rock";
-    //const pSelection = prompt("Player, enter your choice (rock, paper, scissors): ");
+    
+    
+
+
+    
+
+
     
     
 
 
 
     
-    return console.log(cSelection + " eeeek");
+
     
 }
 
-game();
-
-//console.log(playRound(pSelection, cSelection));
 
