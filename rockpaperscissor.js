@@ -68,9 +68,7 @@ function playRound(pSelection, cSelection) {
 function game() {
     //game only starts when player selects their choice
 
-    // initialize values
-        //call computerPlay() to initialize cSelection
-        //call create onclick and set its value to pSelection once clicked
+    
     const pSelection = 0;
 
     document.getElementById("rock").addEventListener("click", function() {
