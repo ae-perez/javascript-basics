@@ -34,18 +34,47 @@ function playRound(pSelection, cSelection) {
     return ret;
 }
 
+function playerPlay(pSelection) {
+    var rock = document.getElementById("rock");
+    var scissors = document.getElementById("scissors");
+    var paper = document.getElementById("paper");
+
+    rock.onclick = function() {
+        pSelection = 'rock';
+        console.log(pSelection);
+    }
+
+    paper.onclick = function() {
+        console.log("paper paper");
+    }
+
+    scissors.onclick = function() {
+        console.log("scissors scissors");
+    }
+
+
+
+    return pSelection;
+}
 
 
 //this is YOUR MAIN FUNCTION
 function game() {
-    var playerScore = 0;
-    var compScore = 0;
+    // initialize values
+    const cSelection = computerPlay(); //get computer selection
+    const pSelection = 0; //get player selection
+    console.log( "this is when pselection equals 0: " + pSelection);
     var count = 0; 
-    
+
+    console.log(pSelection);
+
     //const pSelection = "rock";
     //const pSelection = prompt("Player, enter your choice (rock, paper, scissors): ");
-    const cSelection = computerPlay();
-    let ret = '0';
+    
+    
+
+
+
     
     return console.log(cSelection + " eeeek");
     

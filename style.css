@@ -49,10 +49,11 @@ p {
 }
 
 .choice {
-    /*background-color: darkblue; remove*/
+    background-color: white;
+    border-radius: 20%;
     display: flex;
     justify-content: center;
-    align-items: center
+    align-items: center;
     width: 95%;
     height: 60%;
 
