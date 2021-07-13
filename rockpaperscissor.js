@@ -1,100 +1,124 @@
-function computerPlay() {
-    let rps = ['rock', 'paper', 'scissors'];
-    let ret = (rps[Math.floor(Math.random() * rps.length)]);
-
-    return ret;
-}
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+By: Alejandra Perez
+Date: Jul 12, 2021
 
 
+NOTES:
+functions that should be included:
+  - playRound
+  - computerPlay
+  - game
 
-function playerPlay(pSelection) {
-    var rock = document.getElementById("rock");
-    var scissors = document.getElementById("scissors");
-    var paper = document.getElementById("paper");
+variables that should be included:
+  - pSelection
+  - cSelection
 
 
-    rock.onclick = function() {
-        pSelection = 'rock';
-        console.log(pSelection);
-    }
 
-    paper.onclick = function() {
-        console.log("paper paper");
-    }
-
-    scissors.onclick = function() {
-        console.log("scissors scissors");
-    }
-
-}
-
-function intro () {
-    //this is where you will adjust the display box div
-    //intro message
-}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+var playerScore = 0,
+  computerScore = 0;
+var previousPlayerMove = 'empty';
+var previousComputerMove = 'empty';
 
 function playRound(pSelection, cSelection) {
-    pSelection = pSelection.toLowerCase();
-    let ret = '0';
+  // ***** for this section maybe instead of string return a value so you can keep score
 
-    if (pSelection == 'rock' && cSelection == 'paper') {
-        ret = 'You Lose! Paper beats Rock.'
-    }
-    else if (pSelection == 'rock' && cSelection == 'scissors') {
-        ret = 'You Win! Rock beats Scissors.'
-    }
-    else if (pSelection == 'paper' && cSelection == 'rock') {
-        ret = 'You Win! Paper beats Rock.'
-    }
-    else if (pSelection == 'paper' && cSelection == 'scissors') {
-        ret = 'You Lose! Scissors beats Paper.'
-    }
-    else if (pSelection == 'scissors' && cSelection == 'rock') {
-        ret = 'You Lose! Rock beats Scissors.'
-    }
-    else if (pSelection == 'scissors' && cSelection == 'paper') {
-        ret = 'You Lose! Scissors beats Paper.'
-    }
-    else  { //code when things are tied
-        ret = 'Draw!'
-    }
-
-    return ret;
+  if (pSelection == 'rock' && cSelection == 'paper') {
+    console.log('You Lose! Paper beats rock!'); //delete this after
+    computerScore++;
+    document.getElementById(
+      'comp-score'
+    ).innerHTML = `Computer: ${computerScore}`;
+  } else if (pSelection == 'rock' && cSelection == 'scissors') {
+    console.log('You Win! Rock beats Scissors.'); //delete this after
+    playerScore++;
+    document.getElementById(
+      'player-score'
+    ).innerHTML = `Player: ${playerScore}`;
+  } else if (pSelection == 'paper' && cSelection == 'rock') {
+    console.log('You Win! Paper beats Rock.'); //delete this after
+    playerScore++;
+    document.getElementById(
+      'player-score'
+    ).innerHTML = `Player: ${playerScore}`;
+  } else if (pSelection == 'paper' && cSelection == 'scissors') {
+    console.log('You Lose! Scissors beats Paper.'); //delete this after
+    computerScore++;
+    document.getElementById(
+      'comp-score'
+    ).innerHTML = `Computer: ${computerScore}`;
+  } else if (pSelection == 'scissors' && cSelection == 'rock') {
+    console.log('You Lose! Rock beats Scissors.'); //delete this after
+    computerScore++;
+    document.getElementById(
+      'comp-score'
+    ).innerHTML = `Computer: ${computerScore}`;
+  } else if (pSelection == 'scissors' && cSelection == 'paper') {
+    console.log('You Lose! Scissors beats Paper.'); //delete this after
+    computerScore++;
+  } else {
+    console.log('Draw!');
+    score = 'draw';
+  }
 }
 
+function computerPlay() {
+  let rps = ['rock', 'paper', 'scissors'];
+  let ret = rps[Math.floor(Math.random() * rps.length)];
 
-
-//this is YOUR MAIN FUNCTION
-function game() {
-    //game only starts when player selects their choice
-
-    
-    const pSelection = 0;
-
-    document.getElementById("rock").addEventListener("click", function() {
-        console.log("ROCKYYYYY!");
-
-    });
-
-    const cSelection = computerPlay(); 
-
-    
-
-    
-    
-
-
-    
-
-
-    
-    
-
-
-
-    
-
-    
+  return ret;
 }
 
+function game(playerSelection) {
+  console.log('starting the game ....'); //remove this later
+  //console.log(playerScore, computerScore); //remove
+  //console.log(`this is the playerselection passed through: ${playerSelection}`); //remove
 
+  //initialize variables
+  var computerSelection = computerPlay();
+  var player = 'player-' + playerSelection,
+    comp = 'comp-' + computerSelection; //used for changing html
+  var winner = false;
+  var firstGame = true;
+
+  //check to see if there is a winner
+  if (playerScore == 5 || computerScore == 5) {
+    winner = true;
+  } else if (!winner) {
+    if (previousPlayerMove !== 'empty') {
+      console.log('this is not empty!');
+      document.getElementById(previousPlayerMove).style.display = 'none';
+      document.getElementById(previousComputerMove).style.display = 'none';
+    }
+
+    document.getElementById(player).style.display = 'inline';
+    document.getElementById(comp).style.display = 'inline';
+    playRound(playerSelection, computerSelection); //update the scores in this function
+    previousPlayerMove = player;
+    previousComputerMove = comp;
+  } else {
+    console.log('GAME OVER!');
+  }
+}
+
+function rps() {
+  var rock = document.getElementById('rock');
+  var paper = document.getElementById('paper');
+  var scissors = document.getElementById('scissors');
+
+  rock.onclick = function () {
+    var playerSelection = 'rock';
+    game(playerSelection);
+  };
+
+  paper.onclick = function () {
+    var playerSelection = 'paper';
+    game(playerSelection);
+  };
+
+  scissors.onclick = function () {
+    var playerSelection = 'scissors';
+    game(playerSelection);
+  };
+}

@@ -5,10 +5,17 @@
 
   <script src="rockpaperscissor.js"></script>
   <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <!--link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet"-->
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
 
   <meta charset="UTF-8"/>
@@ -26,10 +33,13 @@
     <div class="screen-div"> <!-- the screen div-->
       <div class="player-div"> <!-- div that will have player components-->
         <div class="player choice"> <!-- where the icons will slide to for player-->
-          <h1>remove me later</h1>
+          <!--h1>remove me later</h1-->
+          <img id="player-rock" class="animate__animated animate__backInUp" src="rock-hands.png" alt="rock" width="200" height="200" style="display: none;">
+          <img id="player-paper" class="animate__animated animate__backInUp" src="paper-hands.png" alt="paper" width="200" height="200" style="display: none;">
+          <img id="player-scissors" class="animate__animated animate__backInUp" src="scissor-hands.png" alt="scissors" width="200" height="200" style="display: none;">
         </div>
-        <div class="icon-div"> <!-- where the options are held-->
-          <img id="rock" src="rock-hands.png" alt="rock" width="90" height="90" onclick="playerPlay()">
+        <div class="icon-div" onclick="rps()"> <!-- where the options are held onclick="playerPlay()"-->
+          <img id="rock" src="rock-hands.png" alt="rock" width="90" height="90">
           <img id="paper" src="paper-hands.png" alt="paper" width="90" height="90">
           <img id="scissors" src="scissor-hands.png" alt="scissors" width="90" height="90">
         </div>
@@ -37,7 +47,10 @@
 
       <div class="comp-div"> <!-- div that will have computer components -->
         <div class= "comp choice"> <!-- where the icons will slide to for computer-->
-          <h1>remove me later</h1>
+          <!--h1>remove me later</h1-->
+          <img id="comp-rock" class="animate__animated animate__backInUp" src="rock-hands.png" alt="rock" width="200" height="200" style="display: none;">
+          <img id="comp-paper" class="animate__animated animate__backInUp" src="paper-hands.png" alt="paper" width="200" height="200" style="display: none;">
+          <img id="comp-scissors" class="animate__animated animate__backInUp" src="scissor-hands.png" alt="scissors" width="200" height="200" style="display: none;">
         </div>
         <div class="icon-div"> <!-- where the options are held-->
           <img src="rock-hands.png" alt="rock" width="90" height="90">
@@ -48,8 +61,9 @@
       </div>
     </div>
 
-    <div class=score-div>
-      
+    <div class='score-div' style='text-align: center;'>
+      <h1 id='player-score'>Player: 0</h1>
+      <h1 id='comp-score'>Computer: 0</h1>
     </div>
 
 

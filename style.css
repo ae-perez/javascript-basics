@@ -1,72 +1,70 @@
 body {
-    background-color: #4c69f6;
-    color: #5D5D5D;
+  background-color: #4c69f6;
+  color: #5d5d5d;
 }
 
 #title-div {
-    margin: auto;
-    width: 80%;
-    padding: 10px;
+  margin: auto;
+  width: 100%;
+  padding: 10px;
 }
 
 p {
-    font-family: 'Comic Neue', cursive;
+  font-family: 'Comic Neue', cursive;
 }
 
 #game-name {
-    font-family: 'Bangers', cursive;
-    color: #5D5D5D;
-    font-size: 90px;
-    animation: pulse 5s, glow 5s infinite;
+  font-family: 'Press Start 2P', cursive;
+  color: black; /*#5d5d5d;*/
+  font-size: 40px;
+  animation: pulse 5s, glow 5s infinite;
+  text-align: center;
 }
 
 .msg {
-    background-color: white;
-    position: absolute;
-    display: none; /*change back to flex once js is complete*/
-    align-items: center;
-    left: 0px;
-    right: 0px;
-    top: 0px;
-    bottom: 0px;
-    z-index: 1;
-    margin: auto;
-    width: 400px;
-    height: 200px;
-    border-radius: 30px;
-    border: 10px solid #f6db35;
-    text-align: center;
-    
-    
+  background-color: white;
+  position: absolute;
+  display: none; /*change back to flex once js is complete*/
+  align-items: center;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  z-index: 1;
+  margin: auto;
+  width: 400px;
+  height: 200px;
+  border-radius: 30px;
+  border: 10px solid #f6db35;
+  text-align: center;
 }
 
 .screen-div {
-    /*background-color: cadetblue; remove*/
-    display: flex;
-    height: 600px;
-    
-    
+  /*background-color: cadetblue; remove*/
+  margin: auto;
+  display: flex;
+  height: 600px;
+  width: 60%;
 }
 
 .choice {
-    background-color: white;
-    border-radius: 20%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 95%;
-    height: 60%;
-
+  background-color: white;
+  border-radius: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  height: 50%;
 }
 
-.player-div, .comp-div {
-    flex: 1;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
+.player-div,
+.comp-div {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /*.player-div {
@@ -77,35 +75,36 @@ p {
 }*/
 
 .icon-div {
-    /*background-color: black; remove*/
-    margin-top: 25px;
-    width: 90%;
-    display: flex;
-    justify-content: space-evenly;
-    padding: 10px;
+  /*background-color: black; remove*/
+  margin-top: 25px;
+  width: 90%;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px;
 }
 
 img:hover {
-    box-shadow: 5px 5px 10px #ee5454;
-    border-radius: 50%;
-    width: 95px;
-    height: 95px;
+  box-shadow: 5px 5px 10px #ee5454;
+  border-radius: 50%;
+  width: 95px;
+  height: 95px;
 }
 /*--------------------------------------------------------------*/
 
 @keyframes pulse {
-    0% {
-      color: #4c69f6;
-    }
-    100% {
-      color: #5D5D5D;
-    }
+  0% {
+    color: #4c69f6;
   }
-
-@keyframes glow {
-    50% {text-shadow: 5px 5px 10px #ffc510;}
+  100% {
+    color: #5d5d5d;
+  }
 }
 
+@keyframes glow {
+  50% {
+    text-shadow: 5px 5px 10px #ffc510;
+  }
+}
 
 /*
 NOTES:
